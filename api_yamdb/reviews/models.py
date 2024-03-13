@@ -19,6 +19,7 @@ class Title(models.Model):
         on_delete=models.PROTECT,
     )
 
+
 class Review(models.Model):
     title = models.ForeignKey(
         to=Title,
@@ -44,7 +45,6 @@ class Comment(models.Model):
         on_delete=models.PROTECT,
     )
     pub_date = models.DateTimeField(auto_now_add=True)
-
 
 
 class GenreTitle(models.Model):
